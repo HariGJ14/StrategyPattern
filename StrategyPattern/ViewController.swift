@@ -62,7 +62,13 @@ class PaymentContext{
         self.objpaymentStrategy = objpaymentStrategy
     }
     
-    
+    func setStrategy(_ strategy: paymentStrategy) {
+            self.objpaymentStrategy = strategy
+        }
+        
+        func payBill(amount: Double) {
+            objpaymentStrategy.Pay(amount: amount)
+        }
     
 }
 
